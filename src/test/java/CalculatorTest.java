@@ -24,4 +24,9 @@ public class CalculatorTest {
     public void calculatorDivide() {
         Assert.assertEquals("Returned wrong result", 10, calculator.divide(100, 10));
     }
+
+    @Test(expected = ArithmeticException.class)
+    public void calculatorDivideZero() {
+        calculator.divide(4, 0);
+    }
 }
